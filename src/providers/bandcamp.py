@@ -31,7 +31,7 @@ async def bandcamp_available(query: str):
         print("aaa")
         return False 
 
-# function currently not working (pasted straight from docs lol), and not used, leaving it here for future changes e.g: also loading metadata when checking availabilit (pasted straight from docs lol)
+# function currently not working (pasted straight from docs lol), and not used, leaving it here for future changes e.g: also loading metadata when checking availability
 
 # async def bandcamp_search_song(query: str):
 #     async with BandcampAPIClient(identity_token='7%09optional_identity_token%7D') as client:
