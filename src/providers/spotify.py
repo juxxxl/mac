@@ -26,3 +26,5 @@ def spotify_search_scrape(query):
 print("aa")
 results = spotify_search_scrape("what we did in the desert")
 print(results)
+
+#all of the above is straight from docs/ai, and non functional :3
