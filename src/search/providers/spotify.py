@@ -50,11 +50,11 @@ def search_spotify(query, artist = None):
         track_url = item["external_urls"]["spotify"]
 
         if search_match:
-            tracks.append(Track(
+            return [Track(
                 title=title,
                 artist=track_artists,
                 url=track_url
-            ))
+            )]
     
-    return tracks
+    return []
 
