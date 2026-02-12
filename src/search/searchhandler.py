@@ -10,5 +10,5 @@ def searchHandler():
         artist = None
     
     spotifyResponse = search_spotify(query, artist)
-    print(F"Spotify{spotifyResponse}")
+    print(f"Spotify{spotifyResponse}")
     return spotifyResponse

@@ -3,6 +3,9 @@ from search.data import Track
 import requests
 import re
 
+# Note: Spotify loves rate-limiting. If this fails, it's spotify's fault, not mine.
+
+
 def get_spotify_token():
     url = "https://open.spotify.com/embed/track/25QRktKOfGxndY4k3LoAGx" # fetch embed page to generate token (GOATED SONG)
     headers = {
@@ -32,9 +35,15 @@ def search_spotify(query, artist = None):
     }
     
     response = requests.get(url, headers=headers, params=parameters)
+    if response.status_code == 429:
+        print("Spotify Ratelimits Exceeded. Please try again later, or search manually.")
+        return []
+    elif response.status_code != 200:
+        Exception(f"Error in spotify request: {response.status_code}")
+        return []
     data = response.json()
 
-    tracks: list[Track] = []
+    # tracks: list[Track] = []
 
     for item in data["tracks"]["items"]:
         if artist is None:
