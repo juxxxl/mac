@@ -26,7 +26,7 @@ The long-term vision is to make this modular, extendable, and fast.
 
 🛠️ Planned Features
 	•	Multi-platform availability checks
-	•	Async requests for speed
+	•	Asynchronous requests for speed
 	•	Optional download via public download sources
 	•	Display song cover artwork
 	•	Clean CLI interface
